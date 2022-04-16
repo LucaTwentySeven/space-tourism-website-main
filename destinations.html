@@ -1,0 +1,108 @@
+<!doctype html>
+<html class="no-js" lang="pl">
+
+<head>
+  <meta charset="utf-8">
+  <title>Space tourism website - Destinations</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="apple-touch-icon" href="icon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/dest.css">
+
+  <link rel="dns-prefetch" href="https://api.npoint.io">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body onload="getWindow()">
+  <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+
+  <div class="header-container">
+    <header class="wrapper site-header">
+      <div class="logo-container">
+        <a href="index.html" class="logo"><img src="./assets/shared/logo.svg" alt="Space tourism logo"></a>
+        <div class="separator"></div>
+      </div>
+
+      <a onclick="openMenu()" class="nav-open">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="21">
+          <g fill="#D0D6F9" fill-rule="evenodd">
+            <path d="M0 0h24v3H0zM0 9h24v3H0zM0 18h24v3H0z" />
+          </g>
+        </svg>
+      </a>
+
+      <nav class="main-nav">
+
+        <a onclick="openMenu()" class="nav-close">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21">
+            <g fill="#D0D6F9" fill-rule="evenodd">
+              <path d="M2.575.954l16.97 16.97-2.12 2.122L.455 3.076z" />
+              <path d="M.454 17.925L17.424.955l2.122 2.12-16.97 16.97z" />
+            </g>
+          </svg>
+        </a>
+
+        <ul class="main-menu">
+          <li class="main-menu__item"><a href="index.html" target="_self" title="Home" class="main-menu__link"><span
+                class="main-menu__link--bold">00</span>Home</a>
+          </li>
+          <li class="main-menu__item"><a href="destinations.html" target="_self" title="Destinations"
+              class="main-menu__link active"><span class="main-menu__link--bold">01</span>Destination</a>
+          </li>
+          <li class="main-menu__item"><a href="crew.html" target="_self" title="Crew" class="main-menu__link"><span
+                class="main-menu__link--bold">02</span>Crew</a>
+          </li>
+          <li class="main-menu__item"><a href="technology.html" target="_self" title="Technology"
+              class="main-menu__link"><span class="main-menu__link--bold">03</span>Technology</a>
+          </li>
+        </ul>
+
+      </nav>
+    </header>
+  </div>
+
+  <div class="main-container">
+    <main class="main wrapper">
+      <div class="main__column">
+        <p class="main__subtitle">
+          <span class="subtitle--bold">01</span>Pick your destination
+        </p>
+        <img class="main__image">
+      </div>
+      <div class="main__column">
+        <ul class="sub-menu"></ul>
+        <h4 class="heading main__heading-l2"></h4>
+        <p class="main__text"></p>
+        <div class="description__wrapper">
+          <div class="description__details">
+            <p class="description__subtitle">Avg. distance</p>
+            <p class="details__distance"></p>
+          </div>
+          <div class="description__details">
+            <p class="description__subtitle">Est. travel time</p>
+            <p class="details__travel"></p>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="./js/main.js"></script>
+  <script src="./js/destinations.js"></script>
+
+</body>
+
+</html>

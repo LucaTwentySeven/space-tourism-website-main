@@ -1,0 +1,270 @@
+body {
+    background: url('../assets/crew/background-crew-mobile.jpg') left 50% top 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main {
+    justify-content: flex-start;
+    padding: 0 24px 24px;
+}
+
+.main__subtitle {
+    position: absolute;
+    top: 88px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 19px;
+    letter-spacing: 2.7px;
+    text-transform: uppercase;
+}
+
+.subtitle--bold {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 2.7px;
+    color: var(--white);
+    mix-blend-mode: normal;
+    opacity: 0.25;
+    margin-right: 18px;
+}
+
+.prev,
+.next {
+    display: inline-block;
+    position: absolute;
+    top: 180px;
+    width: 150px;
+    height: 140px;
+    z-index: 10;
+    padding-top: 70px;
+    cursor: pointer;
+    background: transparent;
+}
+
+.prev:hover,
+.next:hover {
+    background: transparent;
+}
+
+.prev {
+    left: 0;
+    text-align: left;
+}
+
+.next {
+    right: 0;
+    text-align: right;
+}
+
+.main__column {
+    width: 100%;
+}
+
+/* First columen of main container | Setting padding and margin */
+.main>.main__column:first-of-type {
+    padding-top: 139px;
+    margin-bottom: 24px;
+}
+
+.image-wrapper {
+    width: 100%;
+    height: 223px;
+    border-bottom: 1px solid var(--dark-border);
+}
+
+/* Dimensions of image with planet */
+.main__image {
+    height: 100%;
+}
+
+.bullet {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 8px;
+    background-color: var(--white);
+    border-radius: 50%;
+    mix-blend-mode: normal;
+    opacity: 0.17;
+    cursor: pointer;
+}
+
+.bullet:hover {
+    opacity: 0.5;
+}
+
+.bullet.active {
+    opacity: 1;
+}
+
+.main__heading-l3 {
+    margin-bottom: 16px;
+}
+
+.crew-role {
+    font-family: 'Bellefair', serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    text-transform: uppercase;
+    mix-blend-mode: normal;
+    opacity: 0.5;
+    margin: 24px 0 8px;
+}
+
+.main__text {
+    min-height: 150px;
+}
+
+/* Media query for tablet */
+@media only screen and (min-width: 768px) {
+    body {
+        background: url('../assets/crew/background-crew-tablet.jpg') left 50% top 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .subtitle--bold {
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: 3.375px;
+    }
+
+    .main__subtitle {
+        top: 136px;
+        left: 38.5px;
+        transform: none;
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: 3.375px;
+        text-align: left;
+    }
+
+    .main {
+        flex-direction: column-reverse;
+        padding-top: 220px;
+    }
+
+    .prev,
+    .next {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .image-wrapper {
+        width: 100%;
+        height: 572px;
+        border-bottom: 0;
+    }
+
+    .main__column {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .main>.main__column:first-of-type {
+        padding-top: 0;
+        margin-bottom: 0;
+    }
+
+    .main>.main__column:first-of-type>.subtitle {
+        align-self: flex-start;
+    }
+
+    .crew-role {
+        order: 1;
+        font-size: 24px;
+        line-height: 28px;
+        margin: 0 0 8px;
+    }
+
+    .main__heading-l3 {
+        order: 2;
+        font-size: 40px;
+        line-height: 46px;
+    }
+
+    .main__text {
+        order: 3;
+        width: 536px;
+        min-height: 112px;
+        margin-bottom: 40px;
+    }
+
+    .bullet-box {
+        order: 4;
+        margin-bottom: 40px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    body {
+        background: url('../assets/crew/background-crew-desktop.jpg') left 50% top 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        overflow: hidden;
+    }
+
+    .main__subtitle {
+        top: 212px;
+        width: 100%;
+        max-width: var(--max-width-desktop);
+        margin: auto;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 28px;
+        line-height: 34px;
+    }
+
+    .subtitle--bold {
+        font-size: 28px;
+        line-height: 34px;
+    }
+
+    .main {
+        flex-direction: row-reverse;
+        align-items: flex-end;
+        padding: 0;
+    }
+
+    .main__column {
+        align-items: flex-start;
+    }
+
+    .main__column:first-of-type {
+        text-align: right !important;
+    }
+
+    .crew-role {
+        font-size: 32px;
+        line-height: 37px;
+        margin: 0 0 15px;
+    }
+
+    .main__heading-l3 {
+        font-size: 48px;
+        line-height: 64px;
+        margin-bottom: 27px;
+        text-align: left;
+    }
+
+    .main__text {
+        width: 100%;
+        min-height: 128px;
+        font-size: 18px;
+        line-height: 32px;
+        text-align: left;
+        margin-bottom: 120px;
+    }
+
+    .bullet-box {
+        margin-bottom: 70px;
+    }
+}

@@ -1,0 +1,334 @@
+/* Changing background for destination page */
+body {
+    background: url('../assets/technology/background-technology-mobile.jpg') left 50% top 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main {
+    justify-content: flex-start;
+    padding: 0;
+}
+
+.main__subtitle {
+    position: absolute;
+    top: 88px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 19px;
+    letter-spacing: 2.7px;
+    text-transform: uppercase;
+}
+
+.subtitle--bold {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 2.7px;
+    color: var(--white);
+    mix-blend-mode: normal;
+    opacity: 0.25;
+    margin-right: 18px;
+}
+
+.prev,
+.next {
+    display: inline-block;
+    position: absolute;
+    top: 120px;
+    width: 150px;
+    height: 140px;
+    z-index: 10;
+    padding-top: 70px;
+    cursor: pointer;
+    background: transparent;
+}
+
+.prev:hover,
+.next:hover,
+.prev:focus,
+.next:focus {
+    background: transparent;
+}
+
+.prev {
+    left: 0;
+    text-align: left;
+}
+
+.next {
+    right: 0;
+    text-align: right;
+}
+
+.main__column {
+    width: 100%;
+}
+
+/* First columen of main container | Setting padding and margin */
+.main>.main__column:first-of-type {
+    padding-top: 139px;
+    margin-bottom: 24px;
+}
+
+.image-wrapper {
+    width: 100%;
+    height: 170px;
+}
+
+/* Dimensions of image with planet */
+.main__image {
+    width: 100%;
+    height: 100%;
+
+}
+
+.bullet-box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.bullet {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin: 8px;
+    background: transparent;
+    border-radius: 50%;
+    border: 1px solid var(--white-transparent-op-025);
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+}
+
+.bullet:hover,
+.bullet:focus {
+    border: 1px solid var(--white);
+}
+
+.bullet.active {
+    background-color: var(--white);
+}
+
+.bullet.active .bullet-number {
+    color: var(--dark);
+}
+
+.main__heading-l3 {
+    margin-bottom: 16px;
+}
+
+.block__heading {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 2.3625px;
+    color: var(--blue);
+    text-transform: uppercase;
+    margin: 26px 0 9px;
+}
+
+.main__text {
+    min-height: 150px;
+    padding: 0 24px;
+}
+
+/* Media query for tablet */
+@media only screen and (min-width: 768px) {
+    body {
+        background: url('../assets/technology/background-technology-tablet.jpg') left 50% top 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .subtitle--bold {
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: 3.375px;
+    }
+
+    .main__subtitle {
+        top: 136px;
+        left: 38.5px;
+        transform: none;
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: 3.375px;
+        text-align: left;
+    }
+
+    .main {
+        padding-top: 220px;
+    }
+
+    .prev,
+    .next {
+        top: 36%;
+        transform: translateY(-50%);
+    }
+
+    .image-wrapper {
+        width: 100%;
+        height: 310px;
+        margin-bottom: 56px;
+    }
+
+    .main__column {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .main>.main__column:first-of-type {
+        padding-top: 0;
+        margin-bottom: 0;
+    }
+
+    .main>.main__column:first-of-type>.subtitle {
+        align-self: flex-start;
+    }
+
+    .bullet {
+        width: 60px;
+        height: 60px;
+    }
+
+    .block__heading {
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 2.7px;
+        margin: 0 0 16px;
+    }
+
+    .main__heading-l3 {
+        font-size: 40px;
+        line-height: 46px;
+    }
+
+    .main__text {
+        width: 458px;
+        min-height: 100%;
+        margin-bottom: 40px;
+    }
+
+    .bullet-box {
+        margin-bottom: 44px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    body {
+        background: url('../assets/technology/background-technology-desktop.jpg') left 50% top 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .main__subtitle {
+        top: 212px;
+        width: 100%;
+        max-width: var(--max-width-desktop);
+        margin: auto;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 28px;
+        line-height: 34px;
+    }
+
+    .subtitle--bold {
+        font-size: 28px;
+        line-height: 34px;
+    }
+
+    .main {
+        align-items: flex-start;
+        flex-direction: row-reverse;
+        padding: 0;
+        padding-bottom: 101px;
+    }
+
+    .prev,
+    .next {
+        top: 50%;
+    }
+
+    .main__column {
+        align-items: flex-start;
+    }
+
+    .main__column:first-of-type {
+        width: 30%;
+    }
+
+    .main__column:last-of-type {
+        flex-direction: row;
+        justify-content: flex-start;
+        width: 70%;
+        margin-top: 383px;
+    }
+
+    .image-wrapper {
+        position: absolute;
+        right: 0;
+        top: 272px;
+        width: 515px;
+        height: 527px;
+    }
+
+    .main__image {
+        object-fit: cover;
+    }
+
+    .block__heading {
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 2.7px;
+        margin: 0 0 11px;
+        text-align: left;
+    }
+
+    .main__heading-l3 {
+        font-size: 56px;
+        line-height: 64px;
+        margin-bottom: 17px;
+        text-align: left;
+    }
+
+    .main__text {
+        width: 444px;
+        min-height: 140px;
+        font-size: 18px;
+        line-height: 32px;
+        text-align: left;
+        padding: 0;
+        margin-bottom: 0;
+    }
+
+    .bullet-box {
+        flex-direction: column;
+        width: 80px;
+        margin-right: 80px;
+    }
+
+    .bullet {
+        width: 80px;
+        height: 80px;
+        margin: 16px 0;
+    }
+
+    .bullet:first-of-type {
+        margin-top: 0;
+    }
+
+    .bullet:last-of-type {
+        margin-bottom: 0;
+    }
+}

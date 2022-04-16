@@ -1,0 +1,270 @@
+/* Changing background for destination page */
+body {
+    background: url('../assets/destination/background-destination-mobile.jpg') left 50% top 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Main conatiner */
+.main {
+    padding-bottom: 58px;
+}
+
+/* First columen of main container | Setting padding and margin */
+.main>.main__column:first-of-type {
+    padding-top: 88px;
+    margin-bottom: 26px;
+}
+
+/* Dimensions of image with planet */
+.main__image {
+    width: 170px;
+    height: 170px;
+}
+
+/* UL with planets names  */
+.sub-menu {
+    font-size: 0;
+    margin-bottom: 20px;
+}
+
+/* LI elements | Planet menu items */
+.sub-menu__item {
+    position: relative;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 2.3625px;
+    text-transform: uppercase;
+    color: var(--blue);
+    margin: 0 13px;
+    padding: 0 0 8px;
+    border-bottom: 3px solid transparent;
+    cursor: pointer;
+}
+
+/* Adding thin line after planet menu items */
+.sub-menu__item::after {
+    content: '';
+    position: absolute;
+    top: 25px;
+    left: 0;
+    width: 0;
+    height: 0;
+    background: transparent;
+    transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+}
+
+/* Hover effect for thin line */
+.sub-menu__item:hover::after {
+    width: calc(100% - 2.3625px);
+    height: 3px;
+    background-color: var(--white-transparent-border);
+}
+
+/* Settings for active menu item | By adding another class name 'active' */
+.sub-menu__item.active::after {
+    width: calc(100% - 2.3625px);
+    height: 3px;
+    background-color: var(--white);
+}
+
+/* Subheader level 2 | Destination details */
+.description__subtitle {
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 2.3625px;
+    text-transform: uppercase;
+    color: var(--blue);
+    margin: 0 0 12px;
+}
+
+/* Block with travel distance and time details */
+.description__wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.description__details {
+    margin-bottom: 32px;
+}
+
+.details__distance,
+.details__travel {
+    font-family: 'Bellefair', serif;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 32px;
+    text-transform: uppercase;
+}
+
+/* Default paragraph */
+.main__text {
+    padding-bottom: 32px;
+    margin-bottom: 33px;
+    border-bottom: 1px solid var(--dark-border);
+    min-height: 128px;
+}
+
+/* Media query for tablet */
+@media only screen and (min-width: 768px) {
+    body {
+        background: url('../assets/destination/background-destination-tablet.jpg') left 50% top 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .main__heading-l2 {
+        font-size: 80px;
+        line-height: 92px;
+        margin-bottom: 8px;
+    }
+
+    .main__subtitle {
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: 3.375px;
+        margin-left: 14.5px;
+        margin-bottom: 60px;
+        padding-bottom: 0;
+    }
+
+    .subtitle--bold {
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: 3.375px;
+    }
+
+    .main {
+        align-items: flex-start;
+        padding: 136px 24px 90px;
+    }
+
+    .main__image {
+        width: 300px;
+        height: 300px;
+        margin-bottom: 53px;
+    }
+
+    .sub-menu {
+        margin-bottom: 47px;
+    }
+
+    .sub-menu__item {
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 2.7px;
+    }
+
+    .main__column {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .main>.main__column:first-of-type {
+        padding-top: 0;
+        margin-bottom: 0;
+    }
+
+    .main>.main__column:first-of-type>.main__subtitle {
+        align-self: flex-start;
+    }
+
+    .main__text {
+        font-size: 16px;
+        line-height: 28px;
+        padding-bottom: 49px;
+        margin-bottom: 28px;
+        width: 573px;
+        min-height: 100%;
+    }
+
+    .description__wrapper {
+        flex-direction: row;
+    }
+
+    .description__details {
+        margin-right: 79px;
+        margin-bottom: 0;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    body {
+        background: url('../assets/destination/background-destination-desktop.jpg') left 50% top 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .main__subtitle {
+        font-size: 28px;
+        line-height: 34px;
+        letter-spacing: 4.725px;
+        margin-left: 0;
+        margin-bottom: 97px;
+        padding-bottom: 0;
+    }
+
+    .subtitle--bold {
+        font-size: 28px;
+        line-height: 34px;
+        letter-spacing: 4.725px;
+    }
+
+    .main {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 0 0 14vh;
+    }
+
+    .main__image {
+        width: 445px;
+        height: 445px;
+        margin-left: 54px;
+    }
+
+    .sub-menu {
+        margin-bottom: 37px;
+    }
+
+    .sub-menu__item:first-of-type {
+        margin-left: 0;
+    }
+
+    .main__column {
+        justify-content: flex-end;
+        align-items: flex-start;
+        width: 50%;
+        text-align: left;
+    }
+
+    .main>.main__column:first-of-type {
+        padding-top: 212px;
+        margin-bottom: 0;
+        align-items: flex-end;
+    }
+
+    .main>.main__column:last-of-type {
+        padding-top: 310px;
+        padding-left: 157px;
+    }
+
+    .main>.main__column:first-of-type>img {
+        align-self: flex-start;
+    }
+
+    .main__text {
+        font-size: 18px;
+        line-height: 32px;
+        padding-bottom: 54px;
+        margin-bottom: 29px;
+        width: 444px;
+    }
+}
